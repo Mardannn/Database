@@ -7,6 +7,7 @@ create table users (
     isadmin integer default 1
 );
 
+
 alter table users alter column isadmin drop default ;
 
 create table tasks (
