@@ -6,7 +6,6 @@ create table users (
     firstname varchar(50),
     lastname varchar(50),
 );
-
 --3)
 alter table users add column
     isadmin integer;
@@ -19,7 +18,6 @@ alter isadmin set default false;
 --6)
 alter table users
 add primary key(id);
-
 --7)
 create table tasks (
     id serial primary key,
