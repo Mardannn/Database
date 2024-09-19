@@ -1,22 +1,32 @@
+--1)
 create database lab1;
-
+--2)
 create table users (
-    id serial primary key,
+    id serial,
     firstname varchar(50),
     lastname varchar(50),
-    isadmin integer default 1
 );
 
+--3)
+alter table users add column
+    isadmin integer;
+--4)
+alter table users
+alter column isadmin type boolean using (isadmin::boolean);
+--5)
+alter table users
+alter isadmin set default false;
+--6)
+alter table users
+add primary key(id);
 
-alter table users alter column isadmin drop default ;
-
+--7)
 create table tasks (
     id serial primary key,
     name varchar(50),
     user_id int
 );
-drop table users;
-
+--8)
 drop table tasks;
-
+--9)
 drop database lab1;
